@@ -1,10 +1,10 @@
 ---
-title: Text
-description: Examples of text, typography, math equations, diagrams, flowcharts, pictures, videos, and more.
-author: cotes
-date: 2019-08-08 11:33:00 +0800
-categories: [Blogging, Demo]
-tags: [typography]
+title: 线程本地存储：ThreadLocal
+description: 介绍了线程本地存储ThreadLoca使用、原理和使用示例等
+author: whs
+date: 2024-12-26 13:14:52 +0800
+categories: [编程, 并发]
+tags: [并发, ThreadLocal]
 pin: true
 math: true
 mermaid: true
