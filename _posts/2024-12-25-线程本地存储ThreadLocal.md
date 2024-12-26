@@ -44,7 +44,7 @@ SafeParseDate 类使用了 ThreadLocal 中的 SimpleDateFormat ，能够保证�
 ThreadLocal 的作用是让每个线程都有一个单独的对象，那么我们很容易就想键值对形式的 Map，key 为对应的 Thread 对象，value 为要存储的对象
 
 示意图如下：
-![猜测 ThreadLocal 示意图.png](C:\Users\HYC\Documents\GitHub\onezeroyl.github.io\assets\img\猜测ThreadLocal示意图.png)
+![猜测 ThreadLocal 示意图.png](.\..\assets\img\猜测ThreadLocal示意图.png)
 
 但是我们点进去 ThreadLocal 类的 `get()` 方法看却发现事情和我们想的有点不太一样，代码如下：
 
@@ -101,7 +101,7 @@ static class ThreadLocalMap {
 > 为了避免内存泄露。如果 ThreadLocal 对象是一个强引用，即使用户不再需要 ThreadLocal 对象，但只要该线程还存活，那么 ThreadLocalMap 的引用仍然会导致 ThreadLocal 和其关联的 Key 无法被垃圾回收，从而引发内存泄露
 
 ThreadLocalMap 示意图如下：
-![ThreadLocalMap 示意图.png](C:\Users\HYC\Documents\GitHub\onezeroyl.github.io\_posts\assets\ThreadLocalMap示意图.png)
+![ThreadLocalMap 示意图.png](.\..\assets\img\ThreadLocalMap示意图.png)
 现在我们已经知道了具体存放对象的是 Entry 类型的数组了，让我们往下看取出 Entry 的具体操作过程吧
 
 从上面的 `get()` 代码来看，实际获取 Entry 是 `map.getEntry(this)` 方法，下面是对应的代码：
