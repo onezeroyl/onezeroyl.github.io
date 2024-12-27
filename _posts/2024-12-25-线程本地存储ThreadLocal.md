@@ -36,7 +36,7 @@ SimpleDateFormat 是 Java 中的一个日期格式化类，但它在多线程环
 主要原因在于其内部状态（如 calendar 和 numberFormat 对象）会被多个线程共享和修改，而这些状态并没有使用同步机制来保证线程安全性。
 示例代码见
 
-[SimpleDateFormatTest.java]: https://github.com/onezeroyl/java_concurrent_programming_learn_notes/blob/master/concurrent/src/main/java/com/yiling/javaconcurrentprogrammingpractice/chapter30/SimpleDateFormatTest.java
+SimpleDateFormatTest.java <https://github.com/onezeroyl/java_concurrent_programming_learn_notes/blob/master/concurrent/src/main/java/com/yiling/javaconcurrentprogrammingpractice/chapter30/SimpleDateFormatTest.java >
 
 **注意**：为每个线程分配不同的对象这一功能是在应用层面保证的，ThreadLocal 只是起到简单的容器作用
 
