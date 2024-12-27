@@ -9,7 +9,13 @@ pin: true
 math: true
 mermaid: true
 ---
-# 线程本地存储模式：没有共享，就没有伤害
+> 参考：
+>
+> 1. [极客时间-Java并发编程实战]: https://time.geekbang.org/column/intro/100023901?tab=catalog
+>
+> 2. [实战Java高并发程序设计]: https://book.douban.com/subject/36049174/
+>
+>    
 
 我们知道一个变量产生线程安全问题有两个 **必要** 条件：
 
