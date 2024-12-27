@@ -96,6 +96,9 @@ static class ThreadLocalMap {
 > 为了避免内存泄露。如果 ThreadLocal 对象是一个强引用，即使用户不再需要 ThreadLocal 对象，但只要该线程还存活，那么 ThreadLocalMap 的引用仍然会导致 ThreadLocal 和其关联的 Key 无法被垃圾回收，从而引发内存泄露
 
 ThreadLocalMap 示意图如下：
+
+![ThreadLocalMap示意图.png]({{ site.url }}/assets/img/ThreadLocalMap示意图.png)
+
 现在我们已经知道了具体存放对象的是 Entry 类型的数组了，让我们往下看取出 Entry 的具体操作过程吧
 
 从上面的 `get()` 代码来看，实际获取 Entry 是 `map.getEntry(this)` 方法，下面是对应的代码：
