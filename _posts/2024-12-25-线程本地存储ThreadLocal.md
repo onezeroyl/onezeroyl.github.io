@@ -41,6 +41,8 @@ ThreadLocal 的作用是让每个线程都有一个单独的对象，那么我�
 
 示意图如下：
 
+![猜测ThreadLocal示意图.png]({{ site.url }}/assets/img/programming/threallocal/猜测ThreadLocal示意图.png)
+
 但是我们点进去 ThreadLocal 类的 `get()` 方法看却发现事情和我们想的有点不太一样，代码如下：
 
 ```java
@@ -97,7 +99,7 @@ static class ThreadLocalMap {
 
 ThreadLocalMap 示意图如下：
 
-![ThreadLocalMap示意图.png]({{ site.url }}/assets/img/ThreadLocalMap示意图.png)
+![ThreadLocalMap示意图.png]({{ site.url }}/assets/img/programming/threallocal/ThreadLocalMap示意图.png)
 
 现在我们已经知道了具体存放对象的是 Entry 类型的数组了，让我们往下看取出 Entry 的具体操作过程吧
 
