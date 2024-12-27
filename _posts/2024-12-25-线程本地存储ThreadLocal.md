@@ -28,10 +28,9 @@ mermaid: true
 
 SimpleDateFormat 是 Java 中的一个日期格式化类，但它在多线程环境下是非线程安全的。
 主要原因在于其内部状态（如 calendar 和 numberFormat 对象）会被多个线程共享和修改，而这些状态并没有使用同步机制来保证线程安全性。
-示例代码见本包下 `SimpleDateFormatTest.java`
-在示例代码中我们使用线程池来实现并发操作
-ParseDate 任务类无同步措施，线程池执行任务使用的是同一个对象，所以执行会报错
-SafeParseDate 类使用了 ThreadLocal 中的 SimpleDateFormat ，能够保证每个线程都能有独立的对象，所以执行不会报错
+示例代码见
+
+[SimpleDateFormatTest.java]: https://github.com/onezeroyl/java_concurrent_programming_learn_notes/blob/master/concurrent/src/main/java/com/yiling/javaconcurrentprogrammingpractice/chapter30/SimpleDateFormatTest.java
 
 **注意**：为每个线程分配不同的对象这一功能是在应用层面保证的，ThreadLocal 只是起到简单的容器作用
 
