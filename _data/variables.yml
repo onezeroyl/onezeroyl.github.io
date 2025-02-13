@@ -1,0 +1,6 @@
+sources:
+  - bootcdn:
+    mermaid: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js' # 最新稳定版
+    
+  - unpkg:
+    mermaid: 'https://unpkg.com/mermaid@10.2.0/dist/mermaid.min.js'
