@@ -232,3 +232,7 @@ mermaid: true # false (default), true
 
 ## Chart
 chart: true # false (default), true
+
+# 是否启用 Mermaid 支持
+mermaid_config:
+  enabled: true
